@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Școala Mea</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+    <header>
+        <img src="images/acasa.png" alt="Logo Școala Mea" class="logo">
+        <nav>
+            <a href="index.html" class="buton home">Acasă</a>
+            <a href="cum-functioneaza.html" class="buton">Cum funcționează</a>
+            <a href="ce-puteti-crea.html" class="buton">Ce puteți crea</a>
+            <a href="regulament.html" class="buton">Regulament</a>
+            <a href="premii.html" class="buton">Premii</a>
+        </nav>
+    </header>
+    <main class="full-bg" style="background-image: url('images/fond-colaj-color_homepage.jpg');">
+        <audio id="melodie" src="audio/in-randul-patru-anda-calugareanu.mp3" autoplay></audio>
+        <button id="audio-toggle" onclick="toggleAudio()">🔊</button>
+    </main>
+    <script>
+        const audio = document.getElementById("melodie");
+        const toggle = document.getElementById("audio-toggle");
+        let playedOnce = false;
+
+        audio.onplay = () => { playedOnce = true; };
+
+        function toggleAudio() {
+            if (audio.paused) {
+                if (!playedOnce) audio.play();
+                else audio.play();
+                toggle.textContent = "🔊";
+            } else {
+                audio.pause();
+                toggle.textContent = "🔇";
+            }
+        }
+    </script>
+</body>
+</html>

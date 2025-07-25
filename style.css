@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #fff;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+nav .buton {
+    margin: 0 5px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    border: 2px solid transparent;
+}
+nav .buton.home { border-color: #ff00ff; background: linear-gradient(to right, #fff, #ccc); }
+nav .buton:nth-child(2) { border-color: #00ffff; background: linear-gradient(to bottom, #fff, #ccc); }
+nav .buton:nth-child(3) { border-color: #ffff00; background: linear-gradient(to top, #fff, #ccc); }
+nav .buton:nth-child(4) { border-color: #00ff00; background: linear-gradient(to left, #fff, #ccc); }
+nav .buton:nth-child(5) { border-color: #ff0000; background: linear-gradient(to right, #fff, #ccc); }
+.logo { height: 40px; }
+.full-bg {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+#audio-toggle {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+}
