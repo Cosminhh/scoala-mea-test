@@ -17,6 +17,17 @@ if (audio) {
       });
     }
   });
+
+  // ▶️ Pornim melodia la primul click oriunde pe pagină (pentru Firefox etc.)
+  window.addEventListener("click", () => {
+    if (!audioPlaying) {
+      audio.play().then(() => {
+        audioPlaying = true;
+      }).catch(e => {
+        console.log("Redarea la click a eșuat:", e);
+      });
+    }
+  }, { once: true });
 }
 
 // Funcție apelată de butonul 🔊 din meniu
