@@ -1,42 +1,25 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <title>Școala Mea</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Școala Mea</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="home">
-    <header>
-        <img src="images/acasa.png" alt="Logo Școala Mea" class="logo">
-        <nav>
-            <a href="index.html" class="buton home">Acasă</a>
-            <a href="cum-functioneaza.html" class="buton">Cum funcționează</a>
-            <a href="ce-puteti-crea.html" class="buton">Ce puteți crea</a>
-            <a href="regulament.html" class="buton">Regulament</a>
-            <a href="premii.html" class="buton">Premii</a>
-        </nav>
-    </header>
-    <main class="full-bg" style="background-image: url('images/fond-colaj-color_homepage.jpg');">
-        <audio id="melodie" src="audio/in-randul-patru-anda-calugareanu.mp3" autoplay></audio>
-        <button id="audio-toggle" onclick="toggleAudio()">🔊</button>
-    </main>
-    <script>
-        const audio = document.getElementById("melodie");
-        const toggle = document.getElementById("audio-toggle");
-        let playedOnce = false;
+  <audio id="background-audio" autoplay>
+    <source src="audio/in-randul-patru-anda-calugareanu_oqy0seBV.mp3" type="audio/mp3" />
+    Browserul tău nu suportă elementul audio.
+  </audio>
+  <div class="audio-control" onclick="toggleAudio()">🔊</div>
 
-        audio.onplay = () => { playedOnce = true; };
-
-        function toggleAudio() {
-            if (audio.paused) {
-                if (!playedOnce) audio.play();
-                else audio.play();
-                toggle.textContent = "🔊";
-            } else {
-                audio.pause();
-                toggle.textContent = "🔇";
-            }
-        }
-    </script>
+  <div class="nav-buttons">
+    <a href="index.html"><img src="images/acasa.png" alt="Acasă" class="home-icon"></a>
+    <a href="cum-functioneaza.html" class="btn pink">Cum funcționează</a>
+    <a href="ce-puteti-crea.html" class="btn orange">Ce puteți crea</a>
+    <a href="regulament.html" class="btn yellow">Regulament</a>
+    <a href="premii.html" class="btn cyan">Premii</a>
+  </div>
+  <script src="js/audio.js"></script>
 </body>
 </html>
