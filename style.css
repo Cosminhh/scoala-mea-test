@@ -13,42 +13,45 @@ body {
 nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   padding: 20px;
 }
 
-/* Butonul „Acasă” cu imagine – fără fundal alb */
-nav a:first-child {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-}
-
-/* Imaginea butonului „Acasă” – dimensiune controlată */
 nav a img {
   height: 32px;
+  background: transparent;
+  border: none;
 }
 
-/* Stil comun pentru celelalte butoane text */
-nav a:not(:first-child) {
+nav a {
   text-decoration: none;
   padding: 10px 15px;
   border: 3px solid;
   border-radius: 5px;
   font-weight: bold;
   background-color: white;
+  color: purple;
+  font-size: 16px;
   line-height: 1;
-  display: flex;
-  align-items: center;
-  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-/* Culori pentru chenare */
 nav a:nth-child(2) { border-color: fuchsia; }
 nav a:nth-child(3) { border-color: darkorange; }
 nav a:nth-child(4) { border-color: gold; }
 nav a:nth-child(5) { border-color: cyan; }
-nav a:nth-child(6) { border-color: gray; }
+nav a:nth-child(6) {
+  border-color: gray;
+  background-color: white;
+  padding: 5px;
+}
+
+nav a:nth-child(6)::before {
+  content: "🔊";
+  font-size: 18px;
+}
 
 .container {
   background-color: white;

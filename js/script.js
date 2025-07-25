@@ -1,16 +1,13 @@
-let audio = document.createElement("audio");
-audio.src = "audio/in-randul-patru-anda-calugareanu_oqy0seBV.mp3";
+let audio = new Audio("audio/in-randul-patru-anda-calugareanu_oqy0seBV.mp3");
 audio.volume = 0.5;
 audio.autoplay = true;
 audio.setAttribute("playsinline", "");
 audio.setAttribute("preload", "auto");
 
-document.body.appendChild(audio);
-
-// Încearcă autoplay la încărcarea paginii
+// Autoplay când pagina e încărcată – dacă e permis de browser
 document.addEventListener("DOMContentLoaded", () => {
-  audio.play().catch((e) => {
-    console.warn("Autoplay blocat de browser. Va porni manual la click.");
+  audio.play().catch(() => {
+    console.warn("Autoplay blocat. Așteaptă interacțiune.");
   });
 });
 
